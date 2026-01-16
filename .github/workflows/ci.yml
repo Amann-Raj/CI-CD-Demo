@@ -40,5 +40,6 @@ jobs:
       - name: Run frontend tests
         run: |
             cd frontend
-            CI=true npx react-scripts test --watchAll=false
+            CI=true npm test
+
 
