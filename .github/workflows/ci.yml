@@ -10,10 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ---------------- BACKEND ----------------
+      # 2️⃣ Setup Node.js (THIS WAS MISSING)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # 3️⃣ Backend
       - name: Install backend dependencies
         run: |
           cd backend
@@ -24,7 +31,7 @@ jobs:
           cd backend
           npm test
 
-      # ---------------- FRONTEND ----------------
+      # 4️⃣ Frontend
       - name: Install frontend dependencies
         run: |
           cd frontend
