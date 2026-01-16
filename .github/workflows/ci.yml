@@ -32,10 +32,11 @@ jobs:
           npm test
 
       # 4️⃣ Frontend
-      - name: Install frontend dependencies
+      - name: Run frontend tests
         run: |
-          cd frontend
-          npm install
+            cd frontend
+            CI=true npm test
+
 
       - name: Run frontend tests
         run: |
