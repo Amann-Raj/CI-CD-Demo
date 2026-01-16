@@ -35,6 +35,11 @@ jobs:
           cd frontend
           npm install
 
+      - name: Fix frontend binary permissions
+        run: |
+          cd frontend
+          chmod +x node_modules/.bin/*
+
       - name: Build frontend
         run: |
           cd frontend
