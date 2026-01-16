@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/health", (req, res) => {
-  res.json({ status: "OK", message: "Backend running" });
+  res.json({ status: "OK", message: "Backend deployed via CI/CD" });
 });
 
 const PORT = 5000;
