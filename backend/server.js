@@ -7,7 +7,7 @@ const app = express();
 app.use(cors()); // 👈 THIS IS THE FIX
 
 app.get("/health", (req, res) => {
-  res.json({ status: "OK", message: "Backend connected successfully" });
+  res.json({ status: "OK", message: "Backend updated via CI/CD successfully 🚀" });
 });
 
 const PORT = process.env.PORT || 5000;
